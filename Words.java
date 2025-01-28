@@ -8,18 +8,29 @@ public class Words
 
 	public Words()
 	{
-
+		wordList = new ArrayList<Word>();
 	}
 
 	public Words(String s)
 	{
+		wordList = new ArrayList<Word>();
 
+		setWords(s);
 	}
 
 	public void setWords(String s)
 	{
 		//Create a Scanner for the list of words in the string "s"
+		wordList.clear();
 
+		//Create a scanner to chop up the string of numbers
+		Scanner chopper = new Scanner(s);
+
+		//Chop up the string
+		while(chopper.hasNext())
+		{
+			wordList.add(new Word(chopper.nextInt()));
+		}
 
 		//Continue to loop while there are more words to read
 

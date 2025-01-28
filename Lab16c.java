@@ -22,7 +22,7 @@ public class Lab16c
 		System.out.println("\n\n");
 
 
-		//more test cases
+		
 
 	}
 }
